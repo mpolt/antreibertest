@@ -1,4 +1,18 @@
 @import 'tailwindcss';
 @import '@skeletonlabs/skeleton';
 @import '@skeletonlabs/skeleton-svelte';
-@import '@skeletonlabs/skeleton/themes/cerberus';
+@import '@skeletonlabs/skeleton/themes/hamlindigo';
+@import '@fontsource-variable/manrope';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+	--font-sans: 'Manrope Variable', sans-serif;
+}
+
+[data-theme='hamlindigo'] {
+	--typo-base--font-family: 'Manrope Variable', sans-serif;
+	--typo-base--font-weight: 400;
+	--typo-heading--font-family: 'Manrope Variable', sans-serif;
+	--typo-heading--font-weight: 700;
+}
