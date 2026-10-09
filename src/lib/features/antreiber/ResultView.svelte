@@ -60,7 +60,7 @@
 					<span class="font-semibold flex items-center gap-3">
 						{item.label}
 						{#if lead}
-							<span class="badge preset-filled-brand">
+							<span class="badge lead-badge">
 								<Crown class="size-3" aria-hidden="true" />
 								<span
 									>{leaders.length > 1
@@ -123,6 +123,11 @@
 </section>
 
 <style>
+	.lead-badge {
+		background-color: #f5c400;
+		color: #15373b;
+	}
+
 	/* .top-driver {
 		--sheen: color-mix(in oklab, white 62%, transparent);
 		--pool: color-mix(in oklab, var(--accent, var(--color-primary-500)) 14%, transparent);

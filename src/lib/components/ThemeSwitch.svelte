@@ -16,7 +16,7 @@
 		{ value: 'dark', label: 'Dunkel' }
 	] as const;
 
-	let mode = $state<ThemeMode>('system');
+	let mode = $state<ThemeMode>('dark');
 
 	const current = $derived(options.find((option) => option.value === mode) ?? options[0]);
 
@@ -26,7 +26,7 @@
 
 	function readTheme(): ThemeMode {
 		const stored = localStorage.getItem(STORAGE_KEY);
-		return isThemeMode(stored) ? stored : 'system';
+		return isThemeMode(stored) ? stored : 'dark';
 	}
 
 	function applyTheme(next: ThemeMode) {
